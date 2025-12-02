@@ -32,31 +32,9 @@
 % \usepackage{musicography}
 %-------------------------------------------------------------------------------------
 % Bibliography Management
-\usepackage[
-         style = chicago-notes-film,
-      backend  = biber,
-   pagetracker = true,
-      autocite = footnote,
-    abbreviate = false,
-      alldates = comp,
-   citetracker = true,
-   ibidtracker = constrict,
- usetranslator = true,
-      usenamec = true,
- loccittracker = constrict,
-    dateabbrev = false,
-   maxbibnames = 10,
-   minbibnames = 7,
-      sortcase = false,
-    labeltitle = true,
-      alltimes = 12h,
-       urltime = 24h,
-     timezones = true,
-     datezeros = false,
-     datecirca = true,
- dateuncertain = true,
-    uniquename = minfull
-]{biblatex}
+\usepackage[notes,backend=biber,useibid=false,url = true,isbn=false]{biblatex-chicago}
+\usepackage{endnotes}
+\let\footnote=\endnote
 \bibliography{Zotero PhD Biblio}
 \DeclareBibliographyAlias{movie}{video}
 %-------------------------------------------------------------------------------------
@@ -74,11 +52,55 @@
 
 \input{article}
 
-
-
-
 \clearpage
-\printbibliography [title=Bibliography,nottype=video]
-\printbibliography [title=Filmography,type=video]
+\theendnotes
+\clearpage
+
+\section{Figures}
+
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=1\linewidth]{img/alien-approaching-bedroom.pdf}
+    \caption{A series of flute motifs, performed over a pantriadic chordal sequence, builds apprehension as the camera approaches the crew's sleeping quarters.}
+    \label{fig:alien-approaching-bedroom}
+\end{figure}
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\linewidth]{img/alien-bedroom-waking.pdf}
+    \caption{After the camera approaches the sleeping quarters, the lights and lids to the beds raise before Kane gradually gets up.}
+    \label{fig:alien-bedroom-waking}
+\end{figure}
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\linewidth]{img/alien-dallas-bluecollar.pdf}
+     \caption{Images demonstrating Captain Dallas's scruffy appearance and ambivalence to his role. Clockwise from top left: his laidback manner over breakfast (00:07:05); his frustration with having to listen to Ripley's complaints about Ash (00:48:03); reclining in the escape shuttle, trying to distance himself from the dispute among the crew (00:44:08).}
+    \label{fig:alien-dallas-bluecollar}
+\end{figure}
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\linewidth]{img/alien-patting-jones.jpg}
+    \caption{Ripley shows her affection for Jones the cat at the early breakfast scene, becoming the only character to interact with him affectionately (00:07:19).}
+    \label{fig:alien-pattinng-jones}
+\end{figure}
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\linewidth]{img/alien-ending-profile.jpg}
+\caption{Ripley watches the alien float away from the escape pod as Howard Hanson's ``Romantic" Symphony no. 2 plays.}
+    \label{fig:alien-ending-profile}
+\end{figure}
+
+
+% \clearpage
+% \printbibliography [title=Bibliography,nottype=video]
+% \printbibliography [title=Filmography,type=video]
 
 \end{document}
