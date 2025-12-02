@@ -20,7 +20,8 @@ jobs:
         run: |
           mkdir -p pandoc
           pandoc -F pandoc-crossref --citeproc -t html -s -o pandoc/index.html main.tex
-          pandoc -F pandoc-crossref --citeproc main.tex -o pandoc/article.docx  
+          # pandoc -F pandoc-crossref --citeproc main.tex -o pandoc/article.docx
+          pandoc -f latex -t docx --bibliography="Zotero PhD Biblio.bib" -F pandoc-crossref --citeproc --csl chicago-notes-bibliography main.tex -o pandoc/article.docx  
           mkdir -p pandoc/img
           cp -r ./img pandoc/          
           
